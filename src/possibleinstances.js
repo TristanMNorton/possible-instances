@@ -1,9 +1,12 @@
 function possibleInstances(array, arrayProperty) {
     var tempArray = [];
+    var exists = false;
 
     for(var i = 0; i < array.length; i++) {
 
         if (array[i][arrayProperty]) {
+
+            exists = true;
 
             if (Array.isArray(array[i][arrayProperty])) {
 
@@ -23,9 +26,7 @@ function possibleInstances(array, arrayProperty) {
 
             }
 
-        } else {
-            console.log('Property ' + arrayProperty + ' not found');
-        }
+        } 
 
     }
 
